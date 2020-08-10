@@ -24,16 +24,9 @@ export const Background = styled.div.attrs((props: PropTypeBg) => ({
   background: props.background,
 }))<PropTypeBg>`
   flex: 1;
-  background-size: cover;
-  background-color: ${shade(0.3, '#A23521')};
-  background-image: url(${(props) => props.background || ''});
+  background: ${shade(0.3, '#A23521')} url(${(props) => props.background || ''}) center no-repeat;
+  background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  img {
-    width: 100%;
-    max-width: 545px;
-    max-height: 545px;
-  }
 `;
