@@ -1,0 +1,36 @@
+{
+  "name": "lamassita-menu",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.2",
+    "@unform/core": "^2.1.3",
+    "@unform/web": "^2.1.3",
+    "axios": "^0.19.2",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "date-fns": "^2.15.0",
+    "dotenv": "^8.2.0",
+    "next": "9.5.1",
+    "next-seo": "^4.7.3",
+    "polished": "^3.6.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-icons": "^3.10.0",
+    "react-spring": "^8.0.27",
+    "styled-components": "^5.1.1",
+    "uuidv4": "^6.2.2",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.46",
+    "@types/yup": "^0.29.4",
+    "babel-plugin-styled-components": "^1.11.1",
+    "typescript": "^3.9.7"
+  }
+}
