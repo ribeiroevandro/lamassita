@@ -1,5 +1,7 @@
-import { createGlobalStyle } from "styled-components";
-import Head from 'next/head'
+import { createGlobalStyle } from 'styled-components';
+import Head from 'next/head';
+
+import * as S from './styles';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -32,7 +34,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const BasicLayout = ({ children, title }: { children: any, title: string }) => {
+const BasicLayout = ({
+  background,
+  children,
+  title,
+}: {
+  background?: string;
+  children: any;
+  title: string;
+}) => {
   return (
     <>
       <GlobalStyle />
@@ -40,7 +50,11 @@ const BasicLayout = ({ children, title }: { children: any, title: string }) => {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {children}
+      <S.Container>
+        <S.Content>{children}</S.Content>
+
+        <S.Background background={background} />
+      </S.Container>
     </>
   );
 };
