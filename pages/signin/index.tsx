@@ -2,11 +2,16 @@ import React from 'react';
 
 import BasicLayout from '../../layout/Basic';
 import AnimationContainer from '../../components/signin/AnimationContainer';
+import Background  from '../../components/signin/Background';
+import ContainerPage from '../../components/signin/ContainerPage';
 
 const signin = () => {
   return (
-    <BasicLayout background="/icon_signin.png" title="La massita - Backoffice">
-      <AnimationContainer />
+    <BasicLayout title="La massita - Backoffice">
+      <ContainerPage>
+        <AnimationContainer />
+        <Background background="/icon_signin.png" />
+      </ContainerPage>
     </BasicLayout>
   );
 };

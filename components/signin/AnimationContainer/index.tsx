@@ -14,15 +14,17 @@ export default function AnimationContainer() {
   const handleSubmit = useCallback(() => {}, []);
 
   return (
-    <S.AnimationContainer>
-      <img src="/logo_admin.png" alt="DevSpace - Backoffice" />
+    <S.Container>
+      <S.AnimationContainer>
+        <img src="/logo_admin.png" alt="DevSpace - Backoffice" />
 
-      <Form ref={formRef} onSubmit={handleSubmit}>
-        <h1>Faça seu login</h1>
-        <Input name="email" icon={FiMail} type="email" placeholder="E-mail" />
-        <Input name="password" icon={FiLock} type="password" placeholder="Senha" />
-        <Button type="submit">Entrar</Button>
-      </Form>
-    </S.AnimationContainer>
+        <Form ref={formRef} onSubmit={handleSubmit}>
+          <h1>Faça seu login</h1>
+          <Input name="email" icon={FiMail} type="email" placeholder="E-mail" />
+          <Input name="password" icon={FiLock} type="password" placeholder="Senha" />
+          <Button type="submit">Entrar</Button>
+        </Form>
+      </S.AnimationContainer>
+    </S.Container>
   );
 }

@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import Head from 'next/head';
 
-import * as S from './styles';
-
 export const GlobalStyle = createGlobalStyle`
   :root {
     --background: #fff;
@@ -35,11 +33,9 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 const BasicLayout = ({
-  background,
   children,
   title,
 }: {
-  background?: string;
   children: any;
   title: string;
 }) => {
@@ -50,11 +46,7 @@ const BasicLayout = ({
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <S.Container>
-        <S.Content>{children}</S.Content>
-
-        <S.Background background={background} />
-      </S.Container>
+      {children}
     </>
   );
 };
